@@ -1,0 +1,1297 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.24.0112.1233                               -->
+<workbook original-version='18.1' source-build='2023.3.2 (20233.24.0112.1233)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='GLOB.SES' inline='true' name='federated.087n00o0q1qnha11blqhs1d6q0ra' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='GLOB.SES' name='textscan.169d84b04g559h1ggdasn0c93zvn'>
+            <connection class='textscan' directory='C:/Users/mehta/Downloads/ADV_Experiments/ADV_Experiment_2' filename='GLOB.SES.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.169d84b04g559h1ggdasn0c93zvn' name='GLOB.SES.csv' table='[GLOB.SES#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='unid' ordinal='0' />
+            <column datatype='string' name='wbid' ordinal='1' />
+            <column datatype='string' name='country' ordinal='2' />
+            <column datatype='date' date-parse-format='yyyy' name='year' ordinal='3' />
+            <column datatype='real' name='SES' ordinal='4' />
+            <column datatype='real' name='gdppc' ordinal='5' />
+            <column datatype='real' name='yrseduc' ordinal='6' />
+            <column datatype='real' name='popshare' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.169d84b04g559h1ggdasn0c93zvn' name='GLOB.SES.csv' table='[GLOB.SES#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='unid' ordinal='0' />
+            <column datatype='string' name='wbid' ordinal='1' />
+            <column datatype='string' name='country' ordinal='2' />
+            <column datatype='date' date-parse-format='yyyy' name='year' ordinal='3' />
+            <column datatype='real' name='SES' ordinal='4' />
+            <column datatype='real' name='gdppc' ordinal='5' />
+            <column datatype='real' name='yrseduc' ordinal='6' />
+            <column datatype='real' name='popshare' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unid]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>unid</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wbid</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[wbid]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>wbid</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SES</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SES]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>SES</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdppc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdppc]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>gdppc</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>yrseduc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[yrseduc]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>yrseduc</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popshare</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[popshare]</local-name>
+            <parent-name>[GLOB.SES.csv]</parent-name>
+            <remote-alias>popshare</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[SES]' role='measure' type='quantitative' />
+      <column caption='Year (copy)' datatype='date' name='[Year (copy)_1259882008365572097]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[year]' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='GLOB.SES.csv' datatype='table' name='[__tableau_internal_object_id__].[GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348]' role='measure' type='quantitative' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Gdppc' datatype='real' name='[gdppc]' role='measure' type='quantitative' />
+      <column caption='Popshare' datatype='real' name='[popshare]' role='measure' type='quantitative' />
+      <column caption='Unid' datatype='integer' name='[unid]' role='measure' type='quantitative' />
+      <column caption='Wbid' datatype='string' name='[wbid]' role='dimension' type='nominal' />
+      <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Yrseduc' datatype='real' name='[yrseduc]' role='measure' type='quantitative' />
+      <column-instance column='[SES]' derivation='None' name='[none:SES:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+      <column-instance column='[yrseduc]' derivation='None' name='[none:yrseduc:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[SES]' derivation='Sum' name='[sum:SES:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[yrseduc]' derivation='Sum' name='[sum:yrseduc:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='1' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:country:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Bahrain&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Congo&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Germany&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Kazakhstan&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Mexico&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Poland&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Switzerland&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Zimbabwe&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Afghanistan&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Burundi&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;El Salvador&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Iran&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Madagascar&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Nigeria&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Slovenia&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;United Arab Emirates&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Argentina&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Central African Republic&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Finland&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Italy&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mali&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Papua New Guinea&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Sri Lanka&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Venezuela&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Belize&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Croatia&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Guyana&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Lao&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Mozambique&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Russia&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Thailand&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Bangladesh&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Congo, Dem Rep&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Ghana&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Kenya&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Moldova&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Portugal&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Syria&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Armenia&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Chile&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;France&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Jamaica&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Malta&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Paraguay&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Sudan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Vietnam&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Bulgaria&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Ecuador&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;India&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Luxembourg&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Nicaragua&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Singapore&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Uganda&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Albania&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Cambodia&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Estonia&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Iraq&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Malawi&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Norway&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;South Africa&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;United Kingdom&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Brazil&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Denmark&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Hungary&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Libya&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Netherlands&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Serbia&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Tunisia&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Australia&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;China&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gabon&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Japan&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mauritania&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Peru&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Swaziland&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Yemen&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Benin&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Cuba&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Haiti&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Latvia&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Myanmar&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rwanda&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Togo&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Bolivia&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Cyprus&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Honduras&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Lesotho&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Namibia&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Saudi Arabia&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Tonga&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Brunei Darussalam&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Dominican Republic&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Iceland&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Lithuania&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;New Zealand&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sierra Leone&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Turkey&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Burkina Faso&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Egypt&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Indonesia&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Macao&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Niger&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Slovakia&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Ukraine&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Barbados&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Costa Rica&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Greece&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Kuwait&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mongolia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Qatar&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tajikistan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Austria&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Colombia&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Gambia&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Jordan&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mauritius&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Philippines&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Sweden&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Zambia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Algeria&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Cameroon&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ethiopia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ireland&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Malaysia&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Pakistan&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;South Korea&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;United States&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Botswana&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Czech Republic&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Hong Kong&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Liberia&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Nepal&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Senegal&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Trinidad &amp; Tobago&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Belgium&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Côte d&apos;Ivoire&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Guatemala&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Kyrgyzstan&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Morocco&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Romania&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Tanzania&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Angola&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Canada&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Fiji&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Israel&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Maldives&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Panama&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Spain&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Uruguay&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:SES:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.087n00o0q1qnha11blqhs1d6q0ra].[sum:SES:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:yrseduc:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.087n00o0q1qnha11blqhs1d6q0ra].[sum:yrseduc:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='GLOB.SES.csv' id='GLOB.SES.csv_F6A11CEC641B476D9DB55F1712575348'>
+            <properties context=''>
+              <relation connection='textscan.169d84b04g559h1ggdasn0c93zvn' name='GLOB.SES.csv' table='[GLOB.SES#csv]' type='table'>
+                <columns character-set='windows-1252' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='unid' ordinal='0' />
+                  <column datatype='string' name='wbid' ordinal='1' />
+                  <column datatype='string' name='country' ordinal='2' />
+                  <column datatype='date' date-parse-format='yyyy' name='year' ordinal='3' />
+                  <column datatype='real' name='SES' ordinal='4' />
+                  <column datatype='real' name='gdppc' ordinal='5' />
+                  <column datatype='real' name='yrseduc' ordinal='6' />
+                  <column datatype='real' name='popshare' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GLOB.SES' name='federated.087n00o0q1qnha11blqhs1d6q0ra' />
+          </datasources>
+          <datasource-dependencies datasource='federated.087n00o0q1qnha11blqhs1d6q0ra'>
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gdppc' datatype='real' name='[gdppc]' role='measure' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gdppc]' derivation='None' name='[none:gdppc:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='Year-Trunc' name='[tyr:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:qk]' field-type='quantitative' max='#2020-12-28 12:32:30.080#' min='#1867-08-29 15:20:31.264#' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:gdppc:qk]' field-type='quantitative' max='137476.94722325052' min='-12687.689043753981' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='747' />
+                <format attr='maxwidth' value='747' />
+                <format attr='minheight' value='398' />
+                <format attr='maxheight' value='398' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:gdppc:qk]</rows>
+        <cols>[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:qk]</cols>
+      </table>
+      <simple-id uuid='{753956D3-5758-47C4-ACD4-C8CB75A8CBCD}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GLOB.SES' name='federated.087n00o0q1qnha11blqhs1d6q0ra' />
+          </datasources>
+          <datasource-dependencies datasource='federated.087n00o0q1qnha11blqhs1d6q0ra'>
+            <column datatype='real' name='[SES]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gdppc' datatype='real' name='[gdppc]' role='measure' type='quantitative' />
+            <column-instance column='[SES]' derivation='None' name='[none:SES:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gdppc]' derivation='None' name='[none:gdppc:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='Year-Trunc' name='[tyr:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:qk]' field-type='quantitative' max='#2010-01-01 00:00:00#' max-size='1' min='#1880-01-01 00:00:00#' min-size='0.397871' type='quantsize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' />
+              <size column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:qk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.3972961902618408' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:gdppc:qk]</rows>
+        <cols>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:SES:qk]</cols>
+      </table>
+      <simple-id uuid='{6B995124-2859-464F-A0D3-00F4F0A7A7FE}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GLOB.SES' name='federated.087n00o0q1qnha11blqhs1d6q0ra' />
+          </datasources>
+          <datasource-dependencies datasource='federated.087n00o0q1qnha11blqhs1d6q0ra'>
+            <column datatype='real' name='[SES]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SES]' derivation='Sum' name='[sum:SES:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='Year-Trunc' name='[tyr:year:ok]' pivot='key' type='ordinal' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]'>
+            <groupfilter function='level-members' level='[none:country:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:ok]'>
+            <groupfilter function='member' level='[tyr:year:ok]' member='#1880-01-01 00:00:00#' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:ok]</column>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[sum:SES:qk]' />
+              <color column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[sum:SES:qk]' />
+              <text column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' />
+              <text column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6B01ADAB-A375-4757-9D19-83FC80F23581}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GLOB.SES' name='federated.087n00o0q1qnha11blqhs1d6q0ra' />
+          </datasources>
+          <datasource-dependencies datasource='federated.087n00o0q1qnha11blqhs1d6q0ra'>
+            <column caption='Year (copy)' datatype='date' name='[Year (copy)_1259882008365572097]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[year]' />
+            </column>
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[popshare]' derivation='None' name='[none:popshare:qk]' pivot='key' type='quantitative' />
+            <column caption='Popshare' datatype='real' name='[popshare]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year (copy)_1259882008365572097]' derivation='Year' name='[yr:Year (copy)_1259882008365572097:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]'>
+            <groupfilter function='level-members' level='[none:country:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]'>
+            <groupfilter function='level-members' level='[yr:Year (copy)_1259882008365572097:ok]' />
+          </filter>
+          <slices>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]</column>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:popshare:qk]' field-type='quantitative' max='0.86866774143100423' min='-0.021629343143436109' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]' value='52' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:popshare:qk]</rows>
+        <cols>[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]</cols>
+      </table>
+      <simple-id uuid='{B93FEB1F-E65E-4A5D-9E1C-A53037BA25A7}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GLOB.SES' name='federated.087n00o0q1qnha11blqhs1d6q0ra' />
+          </datasources>
+          <datasource-dependencies datasource='federated.087n00o0q1qnha11blqhs1d6q0ra'>
+            <column caption='Year (copy)' datatype='date' name='[Year (copy)_1259882008365572097]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[year]' />
+            </column>
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gdppc' datatype='real' name='[gdppc]' role='measure' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gdppc]' derivation='None' name='[none:gdppc:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year (copy)_1259882008365572097]' derivation='Year' name='[yr:Year (copy)_1259882008365572097:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]'>
+            <groupfilter function='level-members' level='[none:country:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:Year (copy)_1259882008365572097:ok]' member='1990' />
+              <groupfilter function='member' level='[yr:Year (copy)_1259882008365572097:ok]' member='2000' />
+              <groupfilter function='member' level='[yr:Year (copy)_1259882008365572097:ok]' member='2010' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]</column>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]' value='53' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:gdppc:qk]</rows>
+        <cols>[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]</cols>
+      </table>
+      <simple-id uuid='{FDC82619-993E-43F5-90B2-6A0DE0F00B16}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GLOB.SES' name='federated.087n00o0q1qnha11blqhs1d6q0ra' />
+          </datasources>
+          <datasource-dependencies datasource='federated.087n00o0q1qnha11blqhs1d6q0ra'>
+            <column datatype='real' name='[SES]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gdppc' datatype='real' name='[gdppc]' role='measure' type='quantitative' />
+            <column-instance column='[SES]' derivation='None' name='[none:SES:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gdppc]' derivation='None' name='[none:gdppc:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[yrseduc]' derivation='None' name='[none:yrseduc:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='Year-Trunc' name='[tyr:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+            <column caption='Yrseduc' datatype='real' name='[yrseduc]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]'>
+            <groupfilter function='member' level='[none:country:nk]' member='&quot;India&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:SES:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:gdppc:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:yrseduc:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>([federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk] * ([federated.087n00o0q1qnha11blqhs1d6q0ra].[none:SES:qk] + ([federated.087n00o0q1qnha11blqhs1d6q0ra].[none:gdppc:qk] + [federated.087n00o0q1qnha11blqhs1d6q0ra].[none:yrseduc:qk])))</rows>
+        <cols>[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:qk]</cols>
+      </table>
+      <simple-id uuid='{A438BB1A-ADAC-4F70-9970-734822673FDF}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='GLOB.SES' name='federated.087n00o0q1qnha11blqhs1d6q0ra' />
+          </datasources>
+          <datasource-dependencies datasource='federated.087n00o0q1qnha11blqhs1d6q0ra'>
+            <column datatype='real' name='[SES]' role='measure' type='quantitative' />
+            <column caption='Year (copy)' datatype='date' name='[Year (copy)_1259882008365572097]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[year]' />
+            </column>
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Gdppc' datatype='real' name='[gdppc]' role='measure' type='quantitative' />
+            <column-instance column='[SES]' derivation='None' name='[none:SES:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gdppc]' derivation='None' name='[none:gdppc:qk]' pivot='key' type='quantitative' />
+            <column caption='Popshare' datatype='real' name='[popshare]' role='measure' type='quantitative' />
+            <column-instance column='[popshare]' derivation='Sum' name='[sum:popshare:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year (copy)_1259882008365572097]' derivation='Year' name='[yr:Year (copy)_1259882008365572097:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]'>
+            <groupfilter function='level-members' level='[none:country:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' />
+              <size column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[sum:popshare:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:gdppc:qk]</rows>
+        <cols>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:SES:qk]</cols>
+        <pages>
+          <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{6183D643-7D39-4A75-AC71-6662DF2EE017}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{86A97E3C-0E66-483A-B631-D2C675B8EFB4}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8B48C236-CD0C-4303-8661-BBC472DE69BA}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='filter' />
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[sum:SES:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2F66ED7F-FC88-4EFC-B222-8EF58260344B}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]' type='filter' />
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A5D96E99-E844-419B-9473-D58C28EDB4D4}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='filter' />
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[yr:Year (copy)_1259882008365572097:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{1749FD90-BAC5-4E7B-B389-C8A754DD5D84}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{42891CA1-ECC8-4BB7-9451-1B9E131AC71B}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='filter' />
+            <card looped='1' type='currpage' />
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[sum:popshare:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>1970</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{232B5318-A4FA-4A96-8FD3-329EBC7FF456}' />
+    </window>
+  </windows>
+</workbook>
