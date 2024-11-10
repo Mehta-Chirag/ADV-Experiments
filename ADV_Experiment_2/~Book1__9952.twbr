@@ -750,6 +750,15 @@
             <column-instance column='[year]' derivation='Year-Trunc' name='[tyr:year:qk]' pivot='key' type='quantitative' />
             <column caption='Year' datatype='date' name='[year]' role='dimension' type='quantitative' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;United Kingdom&quot;' />
+              <groupfilter function='member' level='[none:country:nk]' member='&quot;United States&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
@@ -771,6 +780,7 @@
             <style>
               <style-rule element='mark'>
                 <format attr='size' value='2.3972961902618408' />
+                <format attr='shape' value=':filled/circle' />
               </style-rule>
             </style>
           </pane>
@@ -1073,8 +1083,8 @@
       <simple-id uuid='{6183D643-7D39-4A75-AC71-6662DF2EE017}' />
     </worksheet>
   </worksheets>
-  <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+  <windows show-side-pane='false' source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1105,7 +1115,7 @@
       </viewpoint>
       <simple-id uuid='{86A97E3C-0E66-483A-B631-D2C675B8EFB4}' />
     </window>
-    <window class='worksheet' name='Sheet 2'>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1127,6 +1137,7 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
+            <card mode='checkdropdown' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='filter' />
             <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[none:country:nk]' type='color' />
             <card pane-specification-id='0' param='[federated.087n00o0q1qnha11blqhs1d6q0ra].[tyr:year:qk]' type='size' />
           </strip>
