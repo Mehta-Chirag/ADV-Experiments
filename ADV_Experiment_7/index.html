@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Data Visualizations</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      text-align: center;
+    }
+    .chart {
+      margin: 20px;
+    }
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+    #company-selector {
+      margin: 20px auto;
+      display: block;
+      width: 200px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Stock Data Visualizations</h2>
+
+<!-- Company Selector -->
+<select id="company-selector">
+  <option value="META">Meta (META)</option>
+  <option value="TSLA">Tesla (TSLA)</option>
+  <option value="GOOGL">Google (GOOGL)</option>
+  <option value="ORCL">Oracle (ORCL)</option>
+  <option value="AMZN">Amazon (AMZN)</option>
+</select>
+
+<!-- Visualization Containers -->
+<div id="line-chart" class="chart"></div>
+<div id="bar-chart" class="chart"></div>
+<div id="candlestick-chart" class="chart"></div>
+<div id="pie-chart" class="chart"></div>
+<div id="scatter-plot" class="chart"></div>
+<div id="word-cloud" class="chart"></div>
+
+<script>
+  const margin = { top: 40, right: 30, bottom: 40, left: 50 },
+        width = 800 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+  const parseDate = d3.timeParse("%Y-%m-%d");
+
+  d3.csv("stock_details_5_years.csv").then(function (data) {
+    data.forEach(d => {
+      d.Date = parseDate(d.Date.split(" ")[0]);
+      d.Open = +d.Open;
+      d.High = +d.High;
+      d.Low = +d.Low;
+      d.Close = +d.Close;
+      d.Volume = +d.Volume;
+    });
+
+    updateVisualizations('META');
+
+    d3.select("#company-selector").on("change", function () {
+      updateVisualizations(this.value);
+    });
+
+    function updateVisualizations(company) {
+      const companyData = data.filter(d => d.Company === company);
+      createLineChart(companyData);
+      createBarChart(companyData);
+      createCandlestickChart(companyData);
+      createPieChart(data);
+      createScatterPlot(companyData);
+      createWordCloud(data);
+    }
+
+    function createLineChart(data) {
+      d3.select("#line-chart").html("");
+      const svg = d3.select("#line-chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      const x = d3.scaleTime()
+        .domain(d3.extent(data, d => d.Date))
+        .range([0, width]);
+
+      const y = d3.scaleLinear()
+        .domain([d3.min(data, d => d.Close), d3.max(data, d => d.Close)])
+        .range([height, 0]);
+
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x));
+
+      svg.append("g").call(d3.axisLeft(y));
+
+      svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.line()
+          .x(d => x(d.Date))
+          .y(d => y(d.Close)));
+    }
+
+    function createBarChart(data) {
+      d3.select("#bar-chart").html("");
+      const svg = d3.select("#bar-chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      const x = d3.scaleBand()
+        .domain(data.map(d => d.Date))
+        .range([0, width])
+        .padding(0.1);
+
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.Volume)])
+        .range([height, 0]);
+
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b %Y")))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end");
+
+      svg.append("g").call(d3.axisLeft(y));
+
+      svg.selectAll(".bar")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.Date))
+        .attr("width", x.bandwidth())
+        .attr("y", d => y(d.Volume))
+        .attr("height", d => height - y(d.Volume))
+        .attr("fill", "orange");
+    }
+
+    function createCandlestickChart(data) {
+      d3.select("#candlestick-chart").html("");
+      const svg = d3.select("#candlestick-chart").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      const x = d3.scaleBand()
+        .domain(data.map(d => d.Date))
+        .range([0, width])
+        .padding(0.2);
+
+      const y = d3.scaleLinear()
+        .domain([d3.min(data, d => d.Low), d3.max(data, d => d.High)])
+        .range([height, 0]);
+
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b %Y")));
+
+      svg.append("g").call(d3.axisLeft(y));
+
+      svg.selectAll(".candle")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("x", d => x(d.Date))
+        .attr("y", d => y(Math.max(d.Open, d.Close)))
+        .attr("width", x.bandwidth())
+        .attr("height", d => Math.abs(y(d.Open) - y(d.Close)))
+        .attr("fill", d => d.Open > d.Close ? "red" : "green");
+    }
+
+    function createPieChart(data) {
+      const selectedCompanies = ["META", "TSLA", "GOOGL", "ORCL", "AMZN"];
+      const filteredData = data.filter(d => selectedCompanies.includes(d.Company));
+
+      const companyVolumes = d3.rollups(
+        filteredData,
+        v => d3.sum(v, d => d.Volume),
+        d => d.Company
+      );
+
+      const radius = Math.min(width, height) / 2;
+      d3.select("#pie-chart").html("");
+
+      const svg = d3.select("#pie-chart").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+      const pie = d3.pie().value(d => d[1]);
+      const arc = d3.arc().innerRadius(0).outerRadius(radius);
+      const color = d3.scaleOrdinal(d3.schemeSet2);
+
+      svg.selectAll("path")
+        .data(pie(companyVolumes))
+        .enter()
+        .append("path")
+        .attr("d", arc)
+        .attr("fill", d => color(d.data[0]))
+        .attr("stroke", "white")
+        .style("stroke-width", "2px");
+
+      svg.selectAll("text")
+        .data(pie(companyVolumes))
+        .enter()
+        .append("text")
+        .attr("transform", d => `translate(${arc.centroid(d)})`)
+        .attr("text-anchor", "middle")
+        .style("font-size", "12px")
+        .text(d => d.data[0]);
+    }
+
+    function createScatterPlot(data) {
+      d3.select("#scatter-plot").html("");
+      const svg = d3.select("#scatter-plot").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", `translate(${margin.left},${margin.top})`);
+
+      const x = d3.scaleLinear()
+        .domain(d3.extent(data, d => d.Close))
+        .range([0, width]);
+
+      const y = d3.scaleLinear()
+        .domain(d3.extent(data, d => d.Volume))
+        .range([height, 0]);
+
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x));
+
+      svg.append("g").call(d3.axisLeft(y));
+
+      svg.selectAll(".dot")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", d => x(d.Close))
+        .attr("cy", d => y(d.Volume))
+        .attr("r", 5)
+        .attr("fill", "purple");
+    }
+
+    function createWordCloud(data) {
+      d3.select("#word-cloud").html("");
+      const wordCounts = [
+        { text: "Stock", size: 30 },
+        { text: "Price", size: 25 },
+        { text: "Volume", size: 20 },
+        { text: "Meta", size: 35 },
+        { text: "Tesla", size: 35 },
+        { text: "Google", size: 25 },
+        { text: "Oracle", size: 20 },
+        { text: "Amazon", size: 30 }
+      ];
+
+      const svg = d3.select("#word-cloud").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+      const layout = d3.layout.cloud()
+        .size([width, height])
+        .words(wordCounts)
+        .padding(5)
+        .rotate(() => ~~(Math.random() * 2) * 90)
+        .fontSize(d => d.size)
+        .on("end", draw);
+
+      layout.start();
+
+      function draw(words) {
+        svg.selectAll("text")
+          .data(words)
+          .enter()
+          .append("text")
+          .style("font-size", d => `${d.size}px`)
+          .style("fill", (d, i) => d3.schemeSet2[i % 10])
+          .attr("text-anchor", "middle")
+          .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
+          .text(d => d.text);
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
