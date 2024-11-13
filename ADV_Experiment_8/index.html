@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Fires Interactive Dashboard</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .chart-container { display: flex; flex-wrap: wrap; justify-content: space-around; }
+        .chart { margin: 20px; width: 400px; height: 400px; }
+    </style>
+</head>
+<body>
+    <h1>Forest Fires Interactive Dashboard</h1>
+    <div class="chart-container">
+        <div id="scatter-plot" class="chart"></div>
+        <div id="humidity-histogram" class="chart"></div>
+        <div id="monthly-bar-chart" class="chart"></div>
+        <div id="fire-class-pie-chart" class="chart"></div>
+        <div id="temperature-line-chart" class="chart"></div>
+    </div>
+    <script src="visualizations.js"></script>
+</body>
+</html>
